@@ -1,5 +1,5 @@
 cd build
-cmake ../clang-plugins-demo
+cmake ../clang-plugins-checker
 make
-clang -fplugin=lib/libfunction-printer-plugin.so -c ../clang-plugins-demo/test/functions.cpp
+clang -fplugin=lib/libfunction-printer-plugin.so -c ../clang-plugins-checker/test/functions.cpp
 # bin/print-functions -- clang -c ../clang-plugins-demo/test/functions.c
