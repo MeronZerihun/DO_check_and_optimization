@@ -1,6 +1,5 @@
-#include<iostream>
-#include<cstdlib>
-using namespace std;
+#include<stdio.h>
+#include<stdlib.h>
 
 int main(){
 
@@ -23,6 +22,7 @@ int main(){
             else{
                 A2[i][j] = 1;
             }
+            
         }
     }
     return 0;

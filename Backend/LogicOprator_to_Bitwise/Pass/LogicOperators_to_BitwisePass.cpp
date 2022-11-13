@@ -8,7 +8,7 @@
 
 using namespace std;
 using namespace llvm;
-namespace{
+namespace Correctness{
 	struct to_bitwisePass: public FunctionPass {
         static char ID;
 		to_bitwisePass() : FunctionPass(ID) {
@@ -84,8 +84,8 @@ namespace{
         
 	};
 }
-char to_bitwisePass::ID = 0;
-static RegisterPass<to_bitwisePass> X("to_bitwisePass", "to_bitwisePass pass",
+char Correctness::to_bitwisePass::ID = 0;
+static RegisterPass<Correctness::to_bitwisePass> X("to_bitwisePass", "to_bitwisePass pass",
     false /* Only looks at CFG */,
     false /* Analysis Pass */);
 
