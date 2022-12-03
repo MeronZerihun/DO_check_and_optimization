@@ -6,7 +6,7 @@ PASS=-to_bitwisePass
 # clean up previous runs
 # rm -f default.profraw ${1}_prof ${1} ${1}_baseline *.bc ${1}.profdata *_output *.ll
 
-clang -emit-llvm -c ${1}.c -o ${1}.bc 
+clang -O0 -S -emit-llvm ${1}.c -o ${1}.bc 
 # Instrument profiler
 opt -enable-new-pm=0 -pgo-instr-gen -instrprof ${1}.bc -o ${1}.prof.bc
 # Generate binary executable with profiler embedded
