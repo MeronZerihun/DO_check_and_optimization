@@ -8,3 +8,4 @@ do
 done
 
 
+mv t.txt ../Pass/

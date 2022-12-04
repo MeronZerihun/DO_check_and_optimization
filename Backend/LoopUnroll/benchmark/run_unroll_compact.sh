@@ -33,7 +33,7 @@ else
     echo -e "\n\n"
     echo -e "2. Performance of optimized code"
     time ./${1}_${2}_unroll > /dev/null
-    X=`(time ./${1}_${2}_unroll > /dev/null) 2>&1 | grep real`
+    X=`(time ./${1}_${2}_unroll > /dev/null) 2>&1 | grep sys`
     echo ${2} = $X >> t.txt
     echo -e "\n\n"
 fi
