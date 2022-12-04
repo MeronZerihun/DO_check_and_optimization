@@ -9,10 +9,7 @@ using namespace std;
 
 int main()
 {
-	int a[] = { 1, 0, 2, 1 };
-	int n = sizeof(a) / sizeof(a[0]);
-
-	std::string delimiter = " = ";
+		std::string delimiter = " = ";
 	// std::vector<std::int,std::int> uf_data;
 
 	std::string file_name = "t.txt";
