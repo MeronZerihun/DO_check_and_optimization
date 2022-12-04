@@ -15,6 +15,38 @@ using namespace std;
 static clang::FrontendPluginRegistry::Add<PrintFunctionsAction>
     X("function-printer-demo", "Print the names of functions inside the file.");
 
+void transformLogical_to_Bitwise(Expr *s, const ASTContext *context){
+    auto src_loc = s->getExprLoc();
+    if(isa<clang::BinaryOperator>(s)){
+        BinaryOperator *bi_op = dyn_cast<BinaryOperator>(s);
+        bool is_logical = bi_op->isLogicalOp();
+        if(is_logical){
+            auto rhs = bi_op->getRHS();
+            auto lhs = bi_op->getLHS();
+
+            auto op = bi_op->getOpcode();
+            if(op == clang::BinaryOperatorKind::BO_And){
+                //create bitwise AND inst
+                //replace the old Logical AND inst with bitwise AND inst
+                // clang::ASTStmtWriter::
+                printf("right hand side: ",rhs);
+                printf("left hand side: ",lhs);
+                // auto opcode = 
+                
+                printf("op: ",op);
+            }
+            else if(op == clang::BinaryOperatorKind::BO_Or)
+            {
+                //create bitwise Or inst 
+                //replace the old Logical Or inst with bitwise Or inst
+                printf("right hand side: ",rhs);
+                printf("left hand side: ",lhs);
+                 
+                printf("op: ",op);
+            }
+        }
+    }
+}
 class FunctionNameVisitor : public clang::RecursiveASTVisitor<FunctionNameVisitor>
 {
 
