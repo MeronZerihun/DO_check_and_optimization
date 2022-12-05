@@ -25,7 +25,7 @@ int main()
 			auto token = myline.substr(0,ff);
 			uf.push_back(atoi(token.c_str()));
 			// std::cout<<"delim length"<<ff+delimiter.length()<<"\n";
-			auto token2 = myline.substr(ff+delimiter.length()+5,myline.length());//change 5 to 4 for real-> sys
+			auto token2 = myline.substr(ff+delimiter.length()+5,myline.length());//TODO change 5 to 4 for real-> sys
 			auto temp = token2.substr(0,token2.find('.'));//mins
 			auto temp2 = token2.substr(token2.find('.')+1, temp.length());//sec
 			auto temp3 = temp.substr(0,temp.find('m')) + temp.substr(temp.find('m')+1, temp.length());
