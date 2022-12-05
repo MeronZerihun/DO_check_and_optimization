@@ -9,30 +9,35 @@
 #include <string>
 #include <unistd.h>
 
+#include "clang/AST/ASTConsumer.h"
+#include "clang/Basic/Diagnostic.h"
+#include "clang/Frontend/CompilerInstance.h"
+#include "clang/Frontend/FrontendActions.h"
+#include "clang/Tooling/Tooling.h"
+
 #include "PrintFunctionsAction.h"
 
 using namespace printfunctions;
 using namespace llvm;
 
-
 static cl::OptionCategory printFunctionsCategory{"print-functions options"};
 
 static cl::opt<std::string> databasePath{"p",
-  cl::desc{"Path to compilation database"},
-  cl::Optional,
-  cl::cat{printFunctionsCategory}};
+                                         cl::desc{"Path to compilation database"},
+                                         cl::Optional,
+                                         cl::cat{printFunctionsCategory}};
 
 static cl::opt<std::string> directCompiler{cl::Positional,
-  cl::desc{"[-- <compiler>"},
-  cl::cat{printFunctionsCategory},
-  cl::init("")};
+                                           cl::desc{"[-- <compiler>"},
+                                           cl::cat{printFunctionsCategory},
+                                           cl::init("")};
 
 static cl::list<std::string> directArgv{cl::ConsumeAfter,
-  cl::desc{"<compiler arguments>...]"},
-  cl::cat{printFunctionsCategory}};
+                                        cl::desc{"<compiler arguments>...]"},
+                                        cl::cat{printFunctionsCategory}};
 
-
-class CommandLineCompilationDatabase : public clang::tooling::CompilationDatabase {
+class CommandLineCompilationDatabase : public clang::tooling::CompilationDatabase
+{
 private:
   clang::tooling::CompileCommand compileCommand;
   std::string sourceFile;
@@ -40,36 +45,42 @@ private:
 public:
   CommandLineCompilationDatabase(llvm::StringRef sourceFile,
                                  std::vector<std::string> commandLine)
-    : compileCommand(".", sourceFile, std::move(commandLine), "dummy.o"),
-      sourceFile{sourceFile}
-      { }
+      : compileCommand(".", sourceFile, std::move(commandLine), "dummy.o"),
+        sourceFile{sourceFile}
+  {
+  }
 
   std::vector<clang::tooling::CompileCommand>
-  getCompileCommands(llvm::StringRef filePath) const override {
-    if (filePath == sourceFile) {
+  getCompileCommands(llvm::StringRef filePath) const override
+  {
+    if (filePath == sourceFile)
+    {
       return {compileCommand};
     }
     return {};
   }
 
   std::vector<std::string>
-  getAllFiles() const override {
+  getAllFiles() const override
+  {
     return {sourceFile};
   }
 
   std::vector<clang::tooling::CompileCommand>
-  getAllCompileCommands() const override {
+  getAllCompileCommands() const override
+  {
     return {compileCommand};
   }
 };
 
-
 std::unique_ptr<clang::tooling::CompilationDatabase>
 createDBFromCommandLine(llvm::StringRef compiler,
                         llvm::ArrayRef<std::string> commandLine,
-                        std::string &errors) {
+                        std::string &errors)
+{
   auto source = std::find(commandLine.begin(), commandLine.end(), "-c");
-  if (source == commandLine.end() || ++source == commandLine.end()) {
+  if (source == commandLine.end() || ++source == commandLine.end())
+  {
     errors = "Command line must contain '-c <source file>'";
     return {};
   }
@@ -77,9 +88,12 @@ createDBFromCommandLine(llvm::StringRef compiler,
   llvm::sys::fs::make_absolute(absolutePath);
 
   std::vector<std::string> args;
-  if (compiler.endswith("++")) {
+  if (compiler.endswith("++"))
+  {
     args.push_back("c++");
-  } else {
+  }
+  else
+  {
     args.push_back("cc");
   }
 
@@ -88,56 +102,63 @@ createDBFromCommandLine(llvm::StringRef compiler,
                                                           std::move(args));
 }
 
-
 static std::unique_ptr<clang::tooling::CompilationDatabase>
-getCompilationDatabase(std::string &errors) {
+getCompilationDatabase(std::string &errors)
+{
   using Database = clang::tooling::CompilationDatabase;
-  if (!directCompiler.empty()) {
+  if (!directCompiler.empty())
+  {
     return createDBFromCommandLine(directCompiler, directArgv, errors);
-  } else if (!databasePath.empty()) {
+  }
+  else if (!databasePath.empty())
+  {
     return Database::autoDetectFromDirectory(databasePath, errors);
-  } else {
+  }
+  else
+  {
     char buffer[256];
-    if (!getcwd(buffer, 256)) {
+    if (!getcwd(buffer, 256))
+    {
       llvm::report_fatal_error("Unable to get current working directory.");
     }
     return Database::autoDetectFromDirectory(buffer, errors);
   }
 }
 
-
 static void
 processFile(clang::tooling::CompilationDatabase const &database,
-            std::string& file) {
+            std::string &file)
+{
   clang::tooling::ClangTool tool{database, file};
   tool.appendArgumentsAdjuster(clang::tooling::getClangStripOutputAdjuster());
   auto frontendFactory =
-    clang::tooling::newFrontendActionFactory<PrintFunctionsAction>();
+      clang::tooling::newFrontendActionFactory<PrintFunctionsAction>();
   tool.run(frontendFactory.get());
 }
 
-
 static void
-processDatabase(clang::tooling::CompilationDatabase const &database) {
+processDatabase(clang::tooling::CompilationDatabase const &database)
+{
   auto count = 0u;
   auto files = database.getAllFiles();
-  llvm::outs() << "Number of files: " << files.size() << "\n";
+  // llvm::outs() << "Number of files: " << files.size() << "\n";
 
-  for (auto &file : files) {
-    llvm::outs() << count << ") File: " << file << "\n";
+  for (auto &file : files)
+  {
+    // llvm::outs() << count << ") File: " << file << "\n";
     processFile(database, file);
     ++count;
   }
 }
 
-
-void
-warnAboutDebugBuild(llvm::StringRef programName) {
+void warnAboutDebugBuild(llvm::StringRef programName)
+{
   const unsigned COLUMNS = 80;
   const char SEPARATOR = '*';
 
   llvm::outs().changeColor(llvm::raw_ostream::Colors::YELLOW, true);
-  for (unsigned i = 0; i < COLUMNS; ++i) {
+  for (unsigned i = 0; i < COLUMNS; ++i)
+  {
     llvm::outs().write(SEPARATOR);
   }
 
@@ -148,16 +169,16 @@ warnAboutDebugBuild(llvm::StringRef programName) {
                << "Your analysis may take longer than normal.\n";
 
   llvm::outs().changeColor(llvm::raw_ostream::Colors::YELLOW, true);
-  for (unsigned i = 0; i < COLUMNS; ++i) {
+  for (unsigned i = 0; i < COLUMNS; ++i)
+  {
     llvm::outs().write(SEPARATOR);
   }
   llvm::outs().resetColor();
   llvm::outs() << "\n\n";
- }
+}
 
-
-int
-main(int argc, char const **argv) {
+int main(int argc, char const **argv)
+{
   sys::PrintStackTraceOnErrorSignal(argv[0]);
   llvm::PrettyStackTraceProgram X(argc, argv);
   llvm_shutdown_obj shutdown;
@@ -171,7 +192,8 @@ main(int argc, char const **argv) {
 
   std::string error;
   auto compilationDB = getCompilationDatabase(error);
-  if (!compilationDB) {
+  if (!compilationDB)
+  {
     llvm::errs() << "Error while trying to load a compilation database:\n"
                  << error << "\n";
     return -1;
@@ -181,4 +203,3 @@ main(int argc, char const **argv) {
 
   return 0;
 }
-
