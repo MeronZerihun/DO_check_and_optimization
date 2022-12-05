@@ -4,7 +4,7 @@
 #include <vector>
 #include<map>
 using namespace std;
-
+#include<algorithm>
 
 
 int main()
@@ -50,7 +50,7 @@ int main()
 		// cout<<uf[i]<<"\n";
 	}
 	std::cout<<"\n got here \n";
-	auto min =std::min(perf_time.begin(),perf_time.end());
+	auto min =std::min_element(perf_time.begin(),perf_time.end());
 	auto opt_UF = uf[std::distance(perf_time.begin(), min)];
 	auto c = *min.base();
 	std::cout<<"min value %d "<<*min.base()<<"\n";
