@@ -8,4 +8,4 @@ do
 done
 
 
-mv t.txt ../Pass/
+mv testing.txt ../Pass/

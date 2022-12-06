@@ -29,11 +29,16 @@ else
     echo -e ">> PASS\n"
     # Measure performance
     echo -e "1. Performance of unoptimized code"
-    time ./${1}_${2}_baseline > /dev/null
+    # time ./${1}_${2}_baseline > /dev/null
+    x=`./${1}_${2}_baseline`
+    echo Time ${x}
     echo -e "\n\n"
     echo -e "2. Performance of optimized code"
-    time ./${1}_${2}_unroll > /dev/null
-    X=`(time ./${1}_${2}_unroll > /dev/null) 2>&1 | grep sys`
-    echo ${2} = $X >> t.txt
+    # time ./${1}_${2}_unroll > /dev/null
+    y=`./${1}_${2}_unroll`
+    echo Time ${y}
+    # X=`(time ./${1}_${2}_unroll > /dev/null) 2>&1 | grep sys`
+    div=`echo $x / $y | bc -l`
+    echo ${2} = $div >> testing.txt
     echo -e "\n\n"
 fi

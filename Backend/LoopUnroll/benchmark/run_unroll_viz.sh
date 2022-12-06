@@ -25,13 +25,16 @@ else
     echo -e ">> PASS\n"
     # Measure performance
     echo -e "1. Performance of unoptimized code"
-    time ./${1}_${2}_baseline > /dev/null
-    echo -e "\n\n"
+    # time ./${1}_${2}_baseline > /dev/null
+    x=`./${1}_${2}_baseline
+    echo Time: ${x}`
+    # echo -e "\n\n"
     echo -e "2. Performance of optimized code"
-    time ./${1}_${2}_unroll > /dev/null
-    X=`(time ./${1}_${2}_unroll > /dev/null) 2>&1 | grep sys`
-    echo ${2} = $X >> t.txt
-    echo -e "\n\n"
+    y=`./${1}_${2}_unroll`
+    echo Time: ${y}
+    div=`echo $x / $y | bc -l`
+    echo ${2} = $div >> testing.txt
+    # echo -e "\n\n"
 fi
 # Cleanup
 # rm -f default.profraw ${1}_${2}_prof ${1}_fplicm ${1}_no_fplicm *.bc ${1}.profdata *_output *.ll
