@@ -11,7 +11,7 @@ cd ../performance
 rm -f default.profraw ${1}_prof ${1}_fplicm ${1}_no_fplicm *.bc ${1}.profdata *_output *.ll
 
 # Convert source code to bitcode (IR)
-clang -emit-llvm -c ${1}.c -o ${1}.bc
+clang -emit-llvm -c ${1}.cpp -o ${1}.bc
 # Canonicalize natural loops
 opt -enable-new-pm=0 -loop-simplify ${1}.bc -o ${1}.ls.bc
 # Instrument profiler
