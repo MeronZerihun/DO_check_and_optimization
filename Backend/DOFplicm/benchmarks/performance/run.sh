@@ -1,4 +1,4 @@
-PATH2LIB=~/DOFplicm/build/DOFplicm/LLVMDOFplicm.so        # Specify your build directory in the project
+PATH2LIB=../../build/DOFplicm/LLVMDOFplicm.so        # Specify your build directory in the project
 PASS=-fplicm-performance                  # Choose either -fplicm-correctness or -fplicm-performance
 
 # Rebuild pass 
