@@ -2,6 +2,7 @@
 #include "clang/AST/RecursiveASTVisitor.h"
 // #include <clang/Frontend/FrontendPluginRegistry.h>
 #include <string.h>
+#include <cctype>
 #include <map>
 
 #include "PrintFunctionsAction.h"
@@ -24,6 +25,7 @@ bool is_IfStmt = false;
 bool is_new = false;
 bool is_ForStmt = false;
 bool is_ArrStmt = false;
+bool is_ArrDecl = false;
 bool is_ReturnStmt = false;
 FunctionDecl *curr_function;
 string curr_function_name = "";
@@ -55,6 +57,7 @@ void FunctionNameVisitor::PrintError(SourceLocation Loc, string errorStmt)
     string err_print = err;
     for (auto it = taint_list.begin(); it != taint_list.end(); it++)
     {
+        // errs() << "Print Error- " << it->first << "\n ";
         // std::cout << it->first // string (key)
         //           << ':'
         //           << it->second // string's value
@@ -63,9 +66,23 @@ void FunctionNameVisitor::PrintError(SourceLocation Loc, string errorStmt)
         auto temp = err.find(pos);
         if (temp != string::npos)
         {
-            found = it->first;
-            // err_print = err.substr(0, temp) + "\e[0;33m" + err.substr(temp, temp + 1) + "\e[0m" + err.substr(temp + 1);
-            err_print = err.substr(0, temp) + "\e[0;33m" + err.substr(temp) + "\e[0m";
+            auto tmp = it->first;
+            // found = it->first;
+            if (tmp.length() == 1)
+            {
+                auto nxt = err.substr(temp, temp + 1);
+                int r = isalpha(nxt.at(1));
+                if (r == 0)
+                {
+                    found = tmp;
+                    err_print = err.substr(0, temp) + "\e[0;33m" + err.substr(temp) + "\e[0m";
+                }
+            }
+            else
+            {
+                found = tmp;
+                err_print = err.substr(0, temp) + "\e[0;33m" + err.substr(temp) + "\e[0m";
+            }
         }
     }
     string err_cls = errorStmt;
@@ -345,21 +362,21 @@ bool FunctionNameVisitor::VisitStmt(Stmt *S)
         //                  << "\n";
         // }
 
-        PrintError(if_stmt->getBeginLoc(), "Non-oblivious IF STATEMENT>Illegal use of secret value in condition");
+        PrintError(if_stmt->getBeginLoc(), "Non-oblivious IF Statement>Illegal use of secret value in condition");
 
         is_IfStmt = false;
         contains_enc = false;
     }
     else if (is_ArrStmt && arr_enc)
     {
-        PrintError(arr_stmt->getBeginLoc(), "Non-oblivious ARRAY ACCESS>Illegal use of secret value during array access");
+        PrintError(arr_stmt->getBeginLoc(), "Non-oblivious Array Access>Illegal use of secret value during array access");
 
         is_ArrStmt = false;
         arr_enc = false;
     }
     else if (arr_enc)
     {
-        PrintError(arr_decl->getBeginLoc(), "Non-oblivious ARRAY DECLARATION>Illegal use of secret value in array declaration");
+        PrintError(arr_decl->getBeginLoc(), "Non-oblivious Array Declaration>Illegal use of secret value in array declaration");
         arr_enc = false;
     }
 
@@ -375,7 +392,7 @@ bool FunctionNameVisitor::VisitStmt(Stmt *S)
         //                  << "\n";
         // }
         PrintError(for_stmt->getBeginLoc(), "Non-oblivious FOR STATEMENT>Illegal use of secret value in for loop");
-        // for_enc = false;
+        for_enc = false;
         // is_ForStmt = false;
         // for_lines
     }
@@ -576,7 +593,7 @@ bool FunctionNameVisitor::VisitDeclRefExpr(DeclRefExpr *S)
     auto token = temp.substr(0, temp.find(" "));
     // errs() << "token: " << token << "\n";
 
-    if (is_new && !curr_decl.empty() && !is_ArrStmt && (token).find("enc") != string::npos)
+    if (is_new && !curr_decl.empty() && !is_ArrStmt && !is_ArrDecl && (token).find("enc") != string::npos)
     {
         taint_list[curr_decl] = 1;
         // errs() << "1. VisitDeclRef: Adding " << curr_decl << " - " << S->getDecl()->getType().getAsString() << "\n ";
@@ -621,6 +638,10 @@ bool FunctionNameVisitor::VisitDeclRefExpr(DeclRefExpr *S)
     {
         arr_impl = true;
     }
+    if (is_ArrDecl)
+    {
+        is_ArrDecl = false;
+    }
     is_new = false;
     return true;
 }
@@ -647,6 +668,7 @@ bool FunctionNameVisitor::VisitVarDecl(VarDecl *S)
         {
             arr_decl = S;
             arr_enc = true;
+            is_ArrDecl = true;
         }
     }
 
@@ -677,13 +699,13 @@ bool FunctionNameVisitor::VisitBinaryOperator(BinaryOperator *S)
     }
     else if (is_new && !curr_decl.empty() && (lhs.find("enc") != string::npos || rhs.find("enc") != string::npos))
     {
-        if (is_assignment)
-        {
-            contains_enc = true;
-            taint_list[curr_decl] = 1;
-            is_new = false;
-            // errs() << "2. VisitBinaryOperator - Adding: " << curr_decl << "\n";
-        }
+        // if (is_assignment)
+        // {
+        contains_enc = true;
+        taint_list[curr_decl] = 1;
+        is_new = false;
+        // errs() << "2. VisitBinaryOperator - Adding: " << curr_decl << "\n";
+        // }
     }
     else if (is_assignment && !curr_decl.empty() && (lhs.find("enc") != string::npos || rhs.find("enc") != string::npos))
     {
@@ -726,9 +748,11 @@ bool FunctionNameVisitor::VisitReturnStmt(ReturnStmt *S)
     is_ReturnStmt = true;
     for (string i : for_vars)
     {
-        // errs() << i << " ";
         if (taint_list.find(i) != taint_list.end())
         {
+            // errs() << "ReturnStmt: " << i << " ";
+            // errs() << "1"
+            //        << "\n";
             // PrintError(for_stmt->getBeginLoc(), "1. Non-oblivious FOR Statement");
             for_enc = true;
             // break;
@@ -747,5 +771,14 @@ bool FunctionNameVisitor::VisitForStmt(ForStmt *S)
     is_ForStmt = true;
     for_stmt = S;
 
+    return true;
+}
+
+bool FunctionNameVisitor::VisitIntegerLiteral(IntegerLiteral *S)
+{
+    if (is_new)
+    {
+        is_new = false;
+    }
     return true;
 }

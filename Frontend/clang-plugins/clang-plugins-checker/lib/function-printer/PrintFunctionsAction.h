@@ -88,6 +88,8 @@ namespace printfunctions
     bool VisitReturnStmt(ReturnStmt *S);
 
     bool VisitInitListExpr(InitListExpr *S);
+
+    bool VisitIntegerLiteral(IntegerLiteral *S);
   };
 
   class PrintFunctionsConsumer : public clang::ASTConsumer

@@ -2,6 +2,7 @@ namespace enc_lib
 {
 #define CMOV(P, A, B) ((P) ? (A) : (B))
   typedef int enc_int;
+  typedef bool enc_bool;
 }
 
 using namespace enc_lib;
@@ -129,7 +130,7 @@ int bar1(enc_int baz)
   // return y;
 
   // Test 12 Expected- FOR: NOT OBLIVIOUS {baz, i, y, x, w, bar1}
-  // int y = 0;
+  // int y = 0 + 1;
   // for (int i = 0; i < baz; i++)
   // {
   //   y = baz;
@@ -248,10 +249,19 @@ int bar1(enc_int baz)
   // }
   // return y;
 
-  // Test 22 Expected-
+  // Test 22 Expected- ARRAY: NOT OBLIVIOUS
+  // int y = baz;
+  // int arr[y];
+  // return baz;
+
+  // Test 23 Expected- IF: NOT OBLIVIOUS {baz, y, x, w, bar1}
   int y = baz;
-  int arr[y];
-  return baz;
+  // bool cond = baz == 1;
+  // if (cond)
+  // {
+  //   y = y + 1;
+  // }
+  return y;
 }
 
 // Test 1: non-DO
@@ -371,8 +381,8 @@ int bar1(enc_int baz)
 // Test 7: Non-DO
 // int bar3(enc_int z, int x)
 // {
-
-//   int b[z]; // Reject such declarations
+//   int g[3];
+//   enc_int b[z]; // Reject such declarations
 //   for (int i = 0; i < sizeof(b); i++)
 //   {
 //     int a = x + z;
@@ -388,9 +398,29 @@ int bar1(enc_int baz)
 //   return 0;
 // }
 
-// Test 8: DO
+// Test 8: Non-DO
+int bar3(enc_int z, int x)
+{
+  int g[3];
+  int b[z]; // Reject such declarations
+  for (int i = 0; i < sizeof(b); i++)
+  {
+    int a = x + z;
+    if (x > 0)
+    {
+      return a;
+    }
+    else
+    {
+      return z;
+    }
+  }
+  return 0;
+}
+
+// Test 9: DO
 // int bar1(enc_int z, int x)
-// { // DO
+// {
 //   int a = x + z;
 //   if (x == 0)
 //   {
@@ -401,6 +431,36 @@ int bar1(enc_int baz)
 //     return 0;
 //   }
 // }
+
+// Test 10: Non-DO
+// int bar1(enc_int z, int x)
+// {
+//   int a = x + z;
+//   enc_bool cond = (x == 0);
+//   if (cond)
+//   {
+//     return a;
+//   }
+//   else
+//   {
+//     return 0;
+//   }
+// }
+
+// Test 11: Non-DO
+int bar1(enc_int z, int x)
+{
+  int a = x + z;
+  bool cond = (x == 0);
+  if (cond)
+  {
+    return a;
+  }
+  else
+  {
+    return 0;
+  }
+}
 
 int main()
 {
@@ -413,10 +473,12 @@ int main()
   //   /* code */
   // }
 
+  // int s2 = bar1(2);
+
   // check(5);
 
-  // int s1 = bar1(2, 3);
-  int s2 = bar1(2);
+  int s1 = bar1(2, 3);
+  // int s4 = bar2(2, 3);
   // int s3 = bar3(2, 3);
 
   return 0;

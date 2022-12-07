@@ -187,7 +187,7 @@ int main(int argc, char const **argv)
   cl::ParseCommandLineOptions(argc, argv);
 
 #if !defined(NDEBUG) || defined(LLVM_ENABLE_ASSERTIONS)
-  warnAboutDebugBuild(argv[0]);
+  // warnAboutDebugBuild(argv[0]);
 #endif
 
   std::string error;

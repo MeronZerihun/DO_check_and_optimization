@@ -33,12 +33,12 @@ include(AddLLVM)
 # LLVM_DIR must be set to the prefix of /share/llvm/cmake via commandline
 find_package(Clang REQUIRED)
 
-message("LLVM STATUS:
-  Definitions ${LLVM_DEFINITIONS}
-  Includes    ${LLVM_INCLUDE_DIRS}
-              ${CLANG_INCLUDE_DIRS}
-  Libraries   ${LLVM_LIBRARY_DIRS}"
-)
+# message("LLVM STATUS:
+#   Definitions ${LLVM_DEFINITIONS}
+#   Includes    ${LLVM_INCLUDE_DIRS}
+#               ${CLANG_INCLUDE_DIRS}
+#   Libraries   ${LLVM_LIBRARY_DIRS}"
+# )
 
 # Now set the LLVM header and library paths:
 include_directories(SYSTEM ${LLVM_INCLUDE_DIRS} ${CLANG_INCLUDE_DIRS})
