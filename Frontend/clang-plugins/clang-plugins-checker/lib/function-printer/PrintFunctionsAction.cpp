@@ -13,6 +13,7 @@ using namespace printfunctions;
 
 using namespace std;
 
+
 map<string, int> taint_list;
 vector<FunctionDecl *> return_list;
 vector<string> for_vars;
@@ -43,6 +44,7 @@ ForStmt *for_stmt;
 VarDecl *arr_decl;
 
 void FunctionNameVisitor::PrintError(SourceLocation Loc, string errorStmt)
+
 {
 
     auto Context = getContext();

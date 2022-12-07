@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -Wl,-rpath-link,  -Wl,--gc-sections -shared  -o ProjectBackend1.so CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o  -Wl,-rpath,"\$ORIGIN/../lib" 
