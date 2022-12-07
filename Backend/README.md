@@ -1,6 +1,6 @@
 This folder contains the implementations of the optimizations using LLVM. 
 
-usage:
+usage for Loop Unrolling
 ```
 ./run.sh <benchmark> <max unroll factor> <steps>
 ```
