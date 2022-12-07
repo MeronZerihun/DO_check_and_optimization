@@ -20,7 +20,6 @@ int main()
 	if ( myfile.is_open() ) {
 		while ( myfile ) {
 			std::getline (myfile, myline);
-			cout<<"my line"<<myline<<endl;
 			if(myline.length()>1){
 				auto ff=  myline.find(delimiter);
 				auto token = myline.substr(0,ff);
@@ -41,6 +40,6 @@ int main()
 	auto min =std::max_element(speedup.begin(),speedup.end());
 	auto opt_UF = uf[std::distance(speedup.begin(), min)];
 	auto c = *min.base();
-	std::cout<<"optimal UF: "<<opt_UF<<"\n";
+	std::cout<<opt_UF<<"\n";
 	return 0;
 }

@@ -23,28 +23,10 @@ if [ "$(diff correct_output unroll_output)" != "" ]; then
     echo -e ">> FAIL\n"
 else
     echo -e ">> PASS\n"
-    # Measure performance
-    # echo -e "1. Performance of unoptimized code"
-    # time ./${1}_${2}_baseline > /dev/null
-    x=`./${1}_${2}_baseline`
-    # echo "got"
-    # echo $x
-    # echo "got"
-    # echo -e "\n\n"
-    # echo -e "2. Performance of optimized code"
-    # time ./${1}_${2}_unroll > /dev/null
-    # X=`(time ./${1}_${2}_unroll > /dev/null) | grep real`
-    # y=`./${1}_${2}_unroll`
-    y=`./${1}_${2}_unroll`
-    # echo $y
-    # echo ${2} = $X >> t.txt
-    # X=`echo $X1 / $X2 | bc -l`
-    div=`echo $x / $y | bc -l`
-    echo ${2} = $div >> testing.txt
-    # echo -e "\n\n"
+    echo -e "1. Performance of unoptimized code"
+    time ./${1}_${2}_baseline > /dev/null
+    echo -e "\n\n"
+    echo -e "2. Performance of optimized code"
+    time ./${1}_${2}_unroll > /dev/null
+    echo -e "\n\n"
 fi
-# Cleanup
-# rm -f default.profraw ${1}_prof ${1}_fplicm ${1}_no_fplicm *.bc ${1}.profdata *_output *.ll
-
-# opt -mem2reg -simplifycfg -loops -lcssa -loop-simplify -loop-rotate -inline -inline-threshold=1000000 ${1}.ll -o LoopUnrollCorrectnessbaseline.bc > /dev/null
-
