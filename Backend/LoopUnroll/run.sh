@@ -1,7 +1,11 @@
+echo -e "**********************************************"
+echo -e "correctness check..."
 cd benchmark/
+bash run_correctness.sh LoopUnrollCorrectness 10
+
+
 echo -e "**********************************************"
 echo running testing loop unrolling ...
-echo -e "\n"
 echo -e "**********************************************"
 bash run.sh ${1} ${2} ${3}
 echo Done
