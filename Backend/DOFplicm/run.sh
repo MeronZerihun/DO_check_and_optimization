@@ -2,7 +2,7 @@ PATH2LIB=../build/DOFplicm/LLVMDOFplicm.so        # Specify your build directory
 PASS=-fplicm-performance                  # Choose either -fplicm-correctness or -fplicm-performance
 
 # Rebuild pass 
-cd ../build
+cd build
 make -j 2
 cd ../performance
 
