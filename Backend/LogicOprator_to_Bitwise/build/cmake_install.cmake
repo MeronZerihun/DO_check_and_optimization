@@ -1,4 +1,4 @@
-# Install script for directory: /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise
+# Install script for directory: /n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build/Pass/cmake_install.cmake")
+  include("/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/Pass/cmake_install.cmake")
 
 endif()
 
@@ -56,5 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

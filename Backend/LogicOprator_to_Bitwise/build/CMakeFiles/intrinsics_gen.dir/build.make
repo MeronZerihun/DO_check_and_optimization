@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise
+CMAKE_SOURCE_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build
+CMAKE_BINARY_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build"
 
 # Utility rule file for intrinsics_gen.
 
@@ -78,6 +78,6 @@ CMakeFiles/intrinsics_gen.dir/clean:
 .PHONY : CMakeFiles/intrinsics_gen.dir/clean
 
 CMakeFiles/intrinsics_gen.dir/depend:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build/CMakeFiles/intrinsics_gen.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles/intrinsics_gen.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/intrinsics_gen.dir/depend
 

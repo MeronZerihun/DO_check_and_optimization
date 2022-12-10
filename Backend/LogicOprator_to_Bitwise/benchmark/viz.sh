@@ -19,10 +19,13 @@ cd $TMP_DIR
 # If profile data available, use it
 PROF_FLAGS=""
 if [[ $VIZ_TYPE == "cfg" ]]; then
+  
   PROF_DATA=$BITCODE_DIR/$BENCH.profdata
+  echo $PROF_DATA
   if [[ -f $PROF_DATA ]]; then
     echo "Using prof data in visualization"
     PROF_FLAGS="-pgo-instr-use -pgo-test-profile-file=$PROF_DATA -cfg-weights"
+    echo -s "got here"
   else
     echo "No prof data, not including it in visualization"
   fi
@@ -31,7 +34,7 @@ fi
 # If not vizzing a special bitcode file, use .ls.bc,
 # otherwise use .bc
 if [[ $BENCH != *"."* ]]; then
-  BITCODE=$BITCODE_DIR/$BENCH.ls.bc
+  BITCODE=$BITCODE_DIR/$BENCH.bc
 else
   BITCODE=$BITCODE_DIR/$BENCH.bc
 fi

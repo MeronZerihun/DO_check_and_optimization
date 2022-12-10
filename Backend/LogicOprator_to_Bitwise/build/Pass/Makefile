@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise
+CMAKE_SOURCE_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build
+CMAKE_BINARY_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build/CMakeFiles /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build/Pass//CMakeFiles/progress.marks
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 0
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/Pass//CMakeFiles/progress.marks"
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/clean
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/preinstall
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/preinstall
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Pass/CMakeFiles/ProjectBackend1.dir/rule:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/CMakeFiles/ProjectBackend1.dir/rule
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/CMakeFiles/ProjectBackend1.dir/rule
 .PHONY : Pass/CMakeFiles/ProjectBackend1.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ ProjectBackend1: Pass/CMakeFiles/ProjectBackend1.dir/rule
 
 # fast build rule for target.
 ProjectBackend1/fast:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/ProjectBackend1.dir/build.make Pass/CMakeFiles/ProjectBackend1.dir/build
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/ProjectBackend1.dir/build.make Pass/CMakeFiles/ProjectBackend1.dir/build
 .PHONY : ProjectBackend1/fast
 
 # Convenience name for target.
 Pass/CMakeFiles/install-ProjectBackend1.dir/rule:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/CMakeFiles/install-ProjectBackend1.dir/rule
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/CMakeFiles/install-ProjectBackend1.dir/rule
 .PHONY : Pass/CMakeFiles/install-ProjectBackend1.dir/rule
 
 # Convenience name for target.
@@ -186,12 +186,12 @@ install-ProjectBackend1: Pass/CMakeFiles/install-ProjectBackend1.dir/rule
 
 # fast build rule for target.
 install-ProjectBackend1/fast:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/install-ProjectBackend1.dir/build.make Pass/CMakeFiles/install-ProjectBackend1.dir/build
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/install-ProjectBackend1.dir/build.make Pass/CMakeFiles/install-ProjectBackend1.dir/build
 .PHONY : install-ProjectBackend1/fast
 
 # Convenience name for target.
 Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/rule:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/rule
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/rule
 .PHONY : Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/rule
 
 # Convenience name for target.
@@ -200,7 +200,7 @@ install-ProjectBackend1-stripped: Pass/CMakeFiles/install-ProjectBackend1-stripp
 
 # fast build rule for target.
 install-ProjectBackend1-stripped/fast:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/build.make Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/build
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/build.make Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/build
 .PHONY : install-ProjectBackend1-stripped/fast
 
 LogicOperators_to_BitwisePass.o: LogicOperators_to_BitwisePass.cpp.o
@@ -208,7 +208,7 @@ LogicOperators_to_BitwisePass.o: LogicOperators_to_BitwisePass.cpp.o
 
 # target to build an object file
 LogicOperators_to_BitwisePass.cpp.o:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/ProjectBackend1.dir/build.make Pass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/ProjectBackend1.dir/build.make Pass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o
 .PHONY : LogicOperators_to_BitwisePass.cpp.o
 
 LogicOperators_to_BitwisePass.i: LogicOperators_to_BitwisePass.cpp.i
@@ -216,7 +216,7 @@ LogicOperators_to_BitwisePass.i: LogicOperators_to_BitwisePass.cpp.i
 
 # target to preprocess a source file
 LogicOperators_to_BitwisePass.cpp.i:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/ProjectBackend1.dir/build.make Pass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.i
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/ProjectBackend1.dir/build.make Pass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.i
 .PHONY : LogicOperators_to_BitwisePass.cpp.i
 
 LogicOperators_to_BitwisePass.s: LogicOperators_to_BitwisePass.cpp.s
@@ -224,7 +224,7 @@ LogicOperators_to_BitwisePass.s: LogicOperators_to_BitwisePass.cpp.s
 
 # target to generate assembly for a file
 LogicOperators_to_BitwisePass.cpp.s:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/ProjectBackend1.dir/build.make Pass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.s
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/ProjectBackend1.dir/build.make Pass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.s
 .PHONY : LogicOperators_to_BitwisePass.cpp.s
 
 # Help Target
@@ -256,6 +256,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /n/eecs583b/home/teadem/583Project/Backend/LogicOprator_to_Bitwise/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
