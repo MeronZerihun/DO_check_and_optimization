@@ -1,4 +1,4 @@
-PATH2LIB=../build/Pass/ProjectBackend1.so
+PATH2LIB=../build/LBPass/ProjectBackend1.so
 PASS=-to_bitwisePass
 PROGRAM=../../../Frontend/clang-plugins/clang-plugins-checker/test
 # clang-format ${1}.cpp

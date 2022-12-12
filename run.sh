@@ -18,9 +18,10 @@ else
     echo 'Applying LoopUnroll...'
     ../../Backend/LoopUnroll/run.sh ${1} 100 10
     echo 'LoopUnroll completed'
-    elif [ ${2} == bitwise-conversion ]; then
+    elif [ ${2} == LogicOperators_to_BitwiseCorrectness ]; then
     echo 'Applying Logical to Bitwise Conversion...'
-    ../../Backend/LogicOprator_to_Bitwise/run_all.sh ${1} 
+    cd ../../Backend/LogicOprator_to_Bitwise/
+    ./run_all.sh LogicOperators_to_BitwiseCorrectness
     echo 'Bitwise Conversion completed'
     elif [ ${2} == loop-fusion ]; then
     echo 'Applying Loop Fusion...'
