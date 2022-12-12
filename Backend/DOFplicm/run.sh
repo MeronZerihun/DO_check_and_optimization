@@ -1,17 +1,16 @@
 PATH2LIB=../build/DOFplicm/LLVMDOFplicm.so        # Specify your build directory in the project
 PASS=-fplicm-performance                  # Choose either -fplicm-correctness or -fplicm-performance
-
+PROGRAM=../../../Frontend/clang-plugins/clang-plugins-checker/test
 # Rebuild pass 
-cd build
+cd ../../Backend/DOFplicm/build
 make -j 2
 cd ../performance
-
 
 # Delete outputs from previous run.
 rm -f default.profraw ${1}_prof ${1}_fplicm ${1}_no_fplicm *.bc ${1}.profdata *_output *.ll
 
 # Convert source code to bitcode (IR)
-clang -emit-llvm -c ${1}.cpp -o ${1}.bc
+clang -emit-llvm -c ${PROGRAM}/${1}.cpp -o ${1}.bc
 # Canonicalize natural loops
 opt -enable-new-pm=0 -loop-simplify ${1}.bc -o ${1}.ls.bc
 # Instrument profiler

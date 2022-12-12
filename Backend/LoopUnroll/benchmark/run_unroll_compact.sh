@@ -1,8 +1,10 @@
+PROGRAM=../../../Frontend/clang-plugins/clang-plugins-checker/test
+
 rm -f default.profraw ${1}_prof ${1} ${1}_baseline *.bc ${1}.profdata *_output *.ll
 
 #convert source code to IR
 # clang -emit-llvm ${1}.c -S -o ${1}.bc
-clang -O0 -Xclang -disable-O0-optnone -emit-llvm ${1}.cpp -S -o ${1}_${2}.bc
+clang -O0 -Xclang -disable-O0-optnone -emit-llvm ${PROGRAM}/${1}.cpp -S -o ${1}_${2}.bc
 #canonicalize natural loops
 # opt -enable-new-pm=0  -mem2reg -loop-simplify  ${1}.bc -o ${1}.ls.bc 
 

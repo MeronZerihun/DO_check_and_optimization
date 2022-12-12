@@ -1,24 +1,18 @@
-echo -e "**********************************************"
-echo -e "correctness check..."
-cd benchmark/
-bash run_correctness.sh LoopUnrollCorrectness 10
-
+cd ../../Backend/LoopUnroll/benchmark/
 
 echo -e "**********************************************"
-echo running testing loop unrolling ...
+echo Testing loop unrolling ...
 echo -e "**********************************************"
 bash run.sh ${1} ${2} ${3}
 echo Done
 echo -e "**********************************************"
-cd ..
-cd Pass/
+cd ../Pass/
 g++ find_opt_UF.cpp -o f
-echo -e "optimal UF: "
+echo -e "Optimal Unroll Factor: "
 ./f
 echo -e "**********************************************"
 X=`./f`
-cd ..
-cd benchmark/
+cd ../benchmark/
 bash run_final.sh ${1} ${X}
 echo -e "DONE"
 
