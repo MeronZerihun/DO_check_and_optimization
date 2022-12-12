@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise
+CMAKE_SOURCE_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build
+CMAKE_BINARY_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -210,7 +210,7 @@ ProjectBackend1: cmake_check_build_system
 
 # fast build rule for target.
 ProjectBackend1/fast:
-	$(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/ProjectBackend1.dir/build.make Pass/CMakeFiles/ProjectBackend1.dir/build
+	$(MAKE) $(MAKESILENT) -f LBPass/CMakeFiles/ProjectBackend1.dir/build.make LBPass/CMakeFiles/ProjectBackend1.dir/build
 .PHONY : ProjectBackend1/fast
 
 #=============================================================================
@@ -223,7 +223,7 @@ install-ProjectBackend1: cmake_check_build_system
 
 # fast build rule for target.
 install-ProjectBackend1/fast:
-	$(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/install-ProjectBackend1.dir/build.make Pass/CMakeFiles/install-ProjectBackend1.dir/build
+	$(MAKE) $(MAKESILENT) -f LBPass/CMakeFiles/install-ProjectBackend1.dir/build.make LBPass/CMakeFiles/install-ProjectBackend1.dir/build
 .PHONY : install-ProjectBackend1/fast
 
 #=============================================================================
@@ -236,7 +236,7 @@ install-ProjectBackend1-stripped: cmake_check_build_system
 
 # fast build rule for target.
 install-ProjectBackend1-stripped/fast:
-	$(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/build.make Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/build
+	$(MAKE) $(MAKESILENT) -f LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/build.make LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/build
 .PHONY : install-ProjectBackend1-stripped/fast
 
 # Help Target

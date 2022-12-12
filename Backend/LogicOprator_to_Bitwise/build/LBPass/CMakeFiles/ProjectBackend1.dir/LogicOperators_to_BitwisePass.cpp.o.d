@@ -1,5 +1,5 @@
-Pass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o: \
- /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/Pass/LogicOperators_to_BitwisePass.cpp \
+LBPass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o: \
+ /n/eecs583b/home/teadem/583Project/new\ clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass/LogicOperators_to_BitwisePass.cpp \
  /usr/include/stdc-predef.h /usr/local/include/llvm/Pass.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
