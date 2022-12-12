@@ -32,25 +32,25 @@ namespace printfunctions
     explicit FunctionNameVisitor(ASTContext *Context)
         : Context(Context) {}
 
-    map<string, int> taint_list;
-    vector<FunctionDecl *> return_list;
-    vector<string> for_vars;
+    // map<string, int> taint_list;
+    // vector<FunctionDecl *> return_list;
+    // vector<string> for_vars;
 
-    string curr_decl = "";
-    string my_file = "";
+    // string curr_decl = "";
+    // string my_file = "";
 
-    int count = 0;
-    bool is_IfStmt = false;
-    bool is_ForStmt = false;
-    bool is_ArrStmt = false;
-    bool is_ReturnStmt = false;
-    FunctionDecl *curr_function;
-    string curr_function_name = "";
-    string curr_decl_type = "";
-    bool is_main = false;
-    bool contains_enc = false;
-    bool arr_enc = false;
-    bool arr_impl = false;
+    // int count = 0;
+    // bool is_IfStmt = false;
+    // bool is_ForStmt = false;
+    // bool is_ArrStmt = false;
+    // bool is_ReturnStmt = false;
+    // FunctionDecl *curr_function;
+    // string curr_function_name = "";
+    // string curr_decl_type = "";
+    // bool is_main = false;
+    // bool contains_enc = false;
+    // bool arr_enc = false;
+    // bool arr_impl = false;
 
     // ---------- Helper functions ----------
     void PrintError(SourceLocation Loc, string errorStmt);

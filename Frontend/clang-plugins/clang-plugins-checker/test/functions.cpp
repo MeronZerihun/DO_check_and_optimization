@@ -1,9 +1,4 @@
-namespace enc_lib
-{
-#define CMOV(P, A, B) ((P) ? (A) : (B))
-  typedef int enc_int;
-  typedef bool enc_bool;
-}
+#include "lib/enc_lib.h"
 
 using namespace enc_lib;
 
@@ -399,24 +394,24 @@ int bar1(enc_int baz)
 // }
 
 // Test 8: Non-DO
-int bar3(enc_int z, int x)
-{
-  int g[3];
-  int b[z]; // Reject such declarations
-  for (int i = 0; i < sizeof(b); i++)
-  {
-    int a = x + z;
-    if (x > 0)
-    {
-      return a;
-    }
-    else
-    {
-      return z;
-    }
-  }
-  return 0;
-}
+// int bar3(enc_int z, int x)
+// {
+//   int g[3];
+//   int b[z]; // Reject such declarations
+//   for (int i = 0; i < sizeof(b); i++)
+//   {
+//     int a = x + z;
+//     if (x > 0)
+//     {
+//       return a;
+//     }
+//     else
+//     {
+//       return z;
+//     }
+//   }
+//   return 0;
+// }
 
 // Test 9: DO
 // int bar1(enc_int z, int x)
@@ -451,7 +446,7 @@ int bar3(enc_int z, int x)
 int bar1(enc_int z, int x)
 {
   int a = x + z;
-  bool cond = (x == 0);
+  bool cond = (z == 0);
   if (cond)
   {
     return a;

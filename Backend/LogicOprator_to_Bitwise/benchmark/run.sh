@@ -1,11 +1,11 @@
-PATH2LIB=~/583Project/Backend/LogicOprator_to_Bitwise/build/Pass/ProjectBackend1.so
+PATH2LIB=../build/Pass/ProjectBackend1.so
 PASS=-to_bitwisePass
-
+PROGRAM=../../../Frontend/clang-plugins/clang-plugins-checker/test
 # clang-format ${1}.cpp
 
 # clean up previous runs
-# rm -f default.profraw ${1}_prof ${1} ${1}_baseline *.bc ${1}.profdata *_output *.ll
-clang -O0 -S -g -emit-llvm ${1}.cpp -o ${1}.bc 
+rm -f default.profraw ${1}_prof ${1} ${1}_baseline *.bc ${1}.profdata *_output *.ll
+clang -O0 -S -g -emit-llvm ${PROGRAM}/${1}.cpp -o ${1}.bc 
 # clang -emit-llvm -c ${1}.c -o ${1}.bc 
 # Instrument profiler
 opt -enable-new-pm=0 -pgo-instr-gen -instrprof  ${1}.bc -o ${1}.prof.bc

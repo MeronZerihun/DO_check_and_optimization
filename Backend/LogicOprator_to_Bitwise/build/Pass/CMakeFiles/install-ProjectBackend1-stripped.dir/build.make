@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise"
+CMAKE_SOURCE_DIR = /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build"
+CMAKE_BINARY_DIR = /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build
 
 # Utility rule file for install-ProjectBackend1-stripped.
 
@@ -67,7 +67,7 @@ include Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/compiler_depend.mak
 include Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/progress.make
 
 Pass/CMakeFiles/install-ProjectBackend1-stripped:
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/Pass" && /usr/bin/cmake -DCMAKE_INSTALL_COMPONENT="ProjectBackend1" -DCMAKE_INSTALL_DO_STRIP=1 -P /n/eecs583b/home/teadem/583Project/new\ clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/cmake_install.cmake
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/Pass && /usr/bin/cmake -DCMAKE_INSTALL_COMPONENT="ProjectBackend1" -DCMAKE_INSTALL_DO_STRIP=1 -P /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/cmake_install.cmake
 
 install-ProjectBackend1-stripped: Pass/CMakeFiles/install-ProjectBackend1-stripped
 install-ProjectBackend1-stripped: Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/build.make
@@ -78,10 +78,10 @@ Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/build: install-ProjectBacke
 .PHONY : Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/build
 
 Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/clean:
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/Pass" && $(CMAKE_COMMAND) -P CMakeFiles/install-ProjectBackend1-stripped.dir/cmake_clean.cmake
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/Pass && $(CMAKE_COMMAND) -P CMakeFiles/install-ProjectBackend1-stripped.dir/cmake_clean.cmake
 .PHONY : Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/clean
 
 Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/depend:
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/Pass" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/Pass" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/Pass /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/Pass /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/depend
 

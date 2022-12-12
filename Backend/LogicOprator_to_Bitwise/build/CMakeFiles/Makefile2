@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise"
+CMAKE_SOURCE_DIR = /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build"
+CMAKE_BINARY_DIR = /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -101,14 +101,14 @@ Pass/clean: Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/clean
 CMakeFiles/intrinsics_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/intrinsics_gen.dir/build.make CMakeFiles/intrinsics_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/intrinsics_gen.dir/build.make CMakeFiles/intrinsics_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" --progress-num= "Built target intrinsics_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles --progress-num= "Built target intrinsics_gen"
 .PHONY : CMakeFiles/intrinsics_gen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/intrinsics_gen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/intrinsics_gen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 0
 .PHONY : CMakeFiles/intrinsics_gen.dir/rule
 
 # Convenience name for target.
@@ -127,14 +127,14 @@ CMakeFiles/intrinsics_gen.dir/clean:
 CMakeFiles/omp_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omp_gen.dir/build.make CMakeFiles/omp_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omp_gen.dir/build.make CMakeFiles/omp_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" --progress-num= "Built target omp_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles --progress-num= "Built target omp_gen"
 .PHONY : CMakeFiles/omp_gen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/omp_gen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/omp_gen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 0
 .PHONY : CMakeFiles/omp_gen.dir/rule
 
 # Convenience name for target.
@@ -153,14 +153,14 @@ CMakeFiles/omp_gen.dir/clean:
 CMakeFiles/acc_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/acc_gen.dir/build.make CMakeFiles/acc_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/acc_gen.dir/build.make CMakeFiles/acc_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" --progress-num= "Built target acc_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles --progress-num= "Built target acc_gen"
 .PHONY : CMakeFiles/acc_gen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/acc_gen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/acc_gen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 0
 .PHONY : CMakeFiles/acc_gen.dir/rule
 
 # Convenience name for target.
@@ -179,14 +179,14 @@ CMakeFiles/acc_gen.dir/clean:
 Pass/CMakeFiles/ProjectBackend1.dir/all:
 	$(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/ProjectBackend1.dir/build.make Pass/CMakeFiles/ProjectBackend1.dir/depend
 	$(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/ProjectBackend1.dir/build.make Pass/CMakeFiles/ProjectBackend1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" --progress-num=1,2 "Built target ProjectBackend1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles --progress-num=1,2 "Built target ProjectBackend1"
 .PHONY : Pass/CMakeFiles/ProjectBackend1.dir/all
 
 # Build rule for subdir invocation for target.
 Pass/CMakeFiles/ProjectBackend1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/CMakeFiles/ProjectBackend1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 0
 .PHONY : Pass/CMakeFiles/ProjectBackend1.dir/rule
 
 # Convenience name for target.
@@ -205,14 +205,14 @@ Pass/CMakeFiles/ProjectBackend1.dir/clean:
 Pass/CMakeFiles/install-ProjectBackend1.dir/all: Pass/CMakeFiles/ProjectBackend1.dir/all
 	$(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/install-ProjectBackend1.dir/build.make Pass/CMakeFiles/install-ProjectBackend1.dir/depend
 	$(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/install-ProjectBackend1.dir/build.make Pass/CMakeFiles/install-ProjectBackend1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" --progress-num= "Built target install-ProjectBackend1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles --progress-num= "Built target install-ProjectBackend1"
 .PHONY : Pass/CMakeFiles/install-ProjectBackend1.dir/all
 
 # Build rule for subdir invocation for target.
 Pass/CMakeFiles/install-ProjectBackend1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/CMakeFiles/install-ProjectBackend1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 0
 .PHONY : Pass/CMakeFiles/install-ProjectBackend1.dir/rule
 
 # Convenience name for target.
@@ -231,14 +231,14 @@ Pass/CMakeFiles/install-ProjectBackend1.dir/clean:
 Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/all: Pass/CMakeFiles/ProjectBackend1.dir/all
 	$(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/build.make Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/depend
 	$(MAKE) $(MAKESILENT) -f Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/build.make Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" --progress-num= "Built target install-ProjectBackend1-stripped"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles --progress-num= "Built target install-ProjectBackend1-stripped"
 .PHONY : Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/all
 
 # Build rule for subdir invocation for target.
 Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles 0
 .PHONY : Pass/CMakeFiles/install-ProjectBackend1-stripped.dir/rule
 
 # Convenience name for target.
