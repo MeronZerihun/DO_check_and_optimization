@@ -55,6 +55,17 @@ void FunctionNameVisitor::PrintError(SourceLocation Loc, string errorStmt)
     std::string err = src.substr(0, new_ln);
     auto found = (taint_list.begin())->first;
     string err_print = err;
+
+    string err_cls = errorStmt;
+    string desc = "";
+    if (errorStmt.find(">") != string::npos)
+    {
+        err_cls = errorStmt.substr(0, errorStmt.find(">"));
+        desc = errorStmt.substr(errorStmt.find(">") + 1);
+    }
+
+    bool is_array = err_cls.find("Array") != string::npos;
+
     for (auto it = taint_list.begin(); it != taint_list.end(); it++)
     {
         auto pos = it->first;
@@ -62,9 +73,11 @@ void FunctionNameVisitor::PrintError(SourceLocation Loc, string errorStmt)
         // errs() << pos << "\n";
         if (temp != string::npos)
         {
+
             auto tmp = it->first;
             if (tmp.length() == 1)
             {
+
                 auto nxt = err.substr(temp);
                 if (nxt.length() > 1)
                 {
@@ -102,30 +115,29 @@ void FunctionNameVisitor::PrintError(SourceLocation Loc, string errorStmt)
             }
         }
     }
-    string err_cls = errorStmt;
-    string desc = "";
-    if (errorStmt.find(">") != string::npos)
-    {
-        err_cls = errorStmt.substr(0, errorStmt.find(">"));
-        desc = errorStmt.substr(errorStmt.find(">") + 1);
-    }
 
     if (FullLocation.isValid() && for_lines.find(FullLocation.getSpellingLineNumber()) == for_lines.end())
     {
+
         if (for_enc)
         {
             for_lines[FullLocation.getSpellingLineNumber()] = 1;
             for_enc = false;
         }
-        llvm::outs() << "\e[1m" << FullLocation.getFileEntry()->getName() << ":"
-                     << FullLocation.getSpellingLineNumber()
-                     << ":"
-                     << FullLocation.getSpellingColumnNumber()
-                     << "\e[1;31m Error: \e[0m\e[1m"
-                     << err_cls << ": " << desc << " \'\e[1;33m" << found << "\e[0m\'"
-                     << "\e[0m \n"
-                     << FullLocation.getSpellingLineNumber() << " | \t" + err_print
-                     << "\n";
+        if (is_array && err.at(err.find(found) + found.length()) != ']')
+        {
+            err_print = "";
+        }
+        if (!err_print.empty() && err_print.find("[0;33m") != string::npos)
+            llvm::outs() << "\e[1m" << FullLocation.getFileEntry()->getName() << ":"
+                         << FullLocation.getSpellingLineNumber()
+                         << ":"
+                         << FullLocation.getSpellingColumnNumber()
+                         << "\e[1;31m Error: \e[0m\e[1m"
+                         << err_cls << ": " << desc << " \'\e[1;33m" << found << "\e[0m\'"
+                         << "\e[0m \n"
+                         << FullLocation.getSpellingLineNumber() << " | \t" + err_print
+                         << "\n";
     }
 }
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise"
+CMAKE_SOURCE_DIR = /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build"
+CMAKE_BINARY_DIR = /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build
 
 # Utility rule file for install-ProjectBackend1.
 
@@ -67,7 +67,7 @@ include LBPass/CMakeFiles/install-ProjectBackend1.dir/compiler_depend.make
 include LBPass/CMakeFiles/install-ProjectBackend1.dir/progress.make
 
 LBPass/CMakeFiles/install-ProjectBackend1:
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass" && /usr/bin/cmake -DCMAKE_INSTALL_COMPONENT="ProjectBackend1" -P /n/eecs583b/home/teadem/583Project/new\ clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/cmake_install.cmake
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass && /usr/bin/cmake -DCMAKE_INSTALL_COMPONENT="ProjectBackend1" -P /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/cmake_install.cmake
 
 install-ProjectBackend1: LBPass/CMakeFiles/install-ProjectBackend1
 install-ProjectBackend1: LBPass/CMakeFiles/install-ProjectBackend1.dir/build.make
@@ -78,10 +78,10 @@ LBPass/CMakeFiles/install-ProjectBackend1.dir/build: install-ProjectBackend1
 .PHONY : LBPass/CMakeFiles/install-ProjectBackend1.dir/build
 
 LBPass/CMakeFiles/install-ProjectBackend1.dir/clean:
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass" && $(CMAKE_COMMAND) -P CMakeFiles/install-ProjectBackend1.dir/cmake_clean.cmake
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass && $(CMAKE_COMMAND) -P CMakeFiles/install-ProjectBackend1.dir/cmake_clean.cmake
 .PHONY : LBPass/CMakeFiles/install-ProjectBackend1.dir/clean
 
 LBPass/CMakeFiles/install-ProjectBackend1.dir/depend:
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass/CMakeFiles/install-ProjectBackend1.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass/CMakeFiles/install-ProjectBackend1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : LBPass/CMakeFiles/install-ProjectBackend1.dir/depend
 

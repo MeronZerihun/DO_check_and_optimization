@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise"
+CMAKE_SOURCE_DIR = /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build"
+CMAKE_BINARY_DIR = /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build
 
 # Utility rule file for install-ProjectBackend1-stripped.
 
@@ -67,7 +67,7 @@ include LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/compiler_depend.m
 include LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/progress.make
 
 LBPass/CMakeFiles/install-ProjectBackend1-stripped:
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass" && /usr/bin/cmake -DCMAKE_INSTALL_COMPONENT="ProjectBackend1" -DCMAKE_INSTALL_DO_STRIP=1 -P /n/eecs583b/home/teadem/583Project/new\ clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/cmake_install.cmake
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass && /usr/bin/cmake -DCMAKE_INSTALL_COMPONENT="ProjectBackend1" -DCMAKE_INSTALL_DO_STRIP=1 -P /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/cmake_install.cmake
 
 install-ProjectBackend1-stripped: LBPass/CMakeFiles/install-ProjectBackend1-stripped
 install-ProjectBackend1-stripped: LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/build.make
@@ -78,10 +78,10 @@ LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/build: install-ProjectBac
 .PHONY : LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/build
 
 LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/clean:
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass" && $(CMAKE_COMMAND) -P CMakeFiles/install-ProjectBackend1-stripped.dir/cmake_clean.cmake
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass && $(CMAKE_COMMAND) -P CMakeFiles/install-ProjectBackend1-stripped.dir/cmake_clean.cmake
 .PHONY : LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/clean
 
 LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/depend:
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : LBPass/CMakeFiles/install-ProjectBackend1-stripped.dir/depend
 

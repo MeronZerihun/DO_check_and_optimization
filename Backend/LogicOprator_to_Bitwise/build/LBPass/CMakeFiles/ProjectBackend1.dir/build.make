@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise"
+CMAKE_SOURCE_DIR = /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build"
+CMAKE_BINARY_DIR = /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build
 
 # Include any dependencies generated for this target.
 include LBPass/CMakeFiles/ProjectBackend1.dir/depend.make
@@ -72,16 +72,16 @@ include LBPass/CMakeFiles/ProjectBackend1.dir/flags.make
 LBPass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o: LBPass/CMakeFiles/ProjectBackend1.dir/flags.make
 LBPass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o: ../LBPass/LogicOperators_to_BitwisePass.cpp
 LBPass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o: LBPass/CMakeFiles/ProjectBackend1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object LBPass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o"
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT LBPass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o -MF CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o.d -o CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o -c "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass/LogicOperators_to_BitwisePass.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object LBPass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o"
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT LBPass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o -MF CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o.d -o CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o -c /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass/LogicOperators_to_BitwisePass.cpp
 
 LBPass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.i"
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass/LogicOperators_to_BitwisePass.cpp" > CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.i
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass/LogicOperators_to_BitwisePass.cpp > CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.i
 
 LBPass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.s"
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass/LogicOperators_to_BitwisePass.cpp" -o CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.s
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass/LogicOperators_to_BitwisePass.cpp -o CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.s
 
 # Object files for target ProjectBackend1
 ProjectBackend1_OBJECTS = \
@@ -93,18 +93,18 @@ ProjectBackend1_EXTERNAL_OBJECTS =
 LBPass/ProjectBackend1.so: LBPass/CMakeFiles/ProjectBackend1.dir/LogicOperators_to_BitwisePass.cpp.o
 LBPass/ProjectBackend1.so: LBPass/CMakeFiles/ProjectBackend1.dir/build.make
 LBPass/ProjectBackend1.so: LBPass/CMakeFiles/ProjectBackend1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module ProjectBackend1.so"
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ProjectBackend1.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module ProjectBackend1.so"
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ProjectBackend1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 LBPass/CMakeFiles/ProjectBackend1.dir/build: LBPass/ProjectBackend1.so
 .PHONY : LBPass/CMakeFiles/ProjectBackend1.dir/build
 
 LBPass/CMakeFiles/ProjectBackend1.dir/clean:
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass" && $(CMAKE_COMMAND) -P CMakeFiles/ProjectBackend1.dir/cmake_clean.cmake
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass && $(CMAKE_COMMAND) -P CMakeFiles/ProjectBackend1.dir/cmake_clean.cmake
 .PHONY : LBPass/CMakeFiles/ProjectBackend1.dir/clean
 
 LBPass/CMakeFiles/ProjectBackend1.dir/depend:
-	cd "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass" "/n/eecs583b/home/teadem/583Project/new clone/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass/CMakeFiles/ProjectBackend1.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/LBPass /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass /n/eecs583a/home/mdemissi/DO_check_and_optimization/Backend/LogicOprator_to_Bitwise/build/LBPass/CMakeFiles/ProjectBackend1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : LBPass/CMakeFiles/ProjectBackend1.dir/depend
 
