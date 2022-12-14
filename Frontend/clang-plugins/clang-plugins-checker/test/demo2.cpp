@@ -6,17 +6,15 @@ using namespace enc_lib;
 // A function to implement Bubble Sort
 void bubbleSort(enc_int arr1[], int n)
 {
-    enc_int i;
-    int j;
+    enc_int i, j;
     for (i = 0; i < n - 1; i++)
     {
         for (j = 0; j < n - i - 1; j++)
         {
-            int nxt = j + 1;
-            if (arr1[j] > arr1[nxt])
+            if (arr1[j] > arr1[j + 1])
             {
                 int tmp = arr1[j];
-                arr1[j] = arr1[nxt];
+                arr1[j] = arr1[j + 1];
                 arr1[j + 1] = tmp;
             }
         }
@@ -26,9 +24,9 @@ void bubbleSort(enc_int arr1[], int n)
 // Function to print an array
 void printArray(int arr[], int size)
 {
-    int i;
-    for (i = 0; i < size; i++)
-        printf("%d ", arr[i]);
+    int x;
+    for (x = 0; x < size; x++)
+        printf("%d ", arr[x]);
     printf("\n");
 }
 
